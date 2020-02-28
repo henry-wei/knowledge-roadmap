@@ -38,11 +38,7 @@
 
 ### Animation
 
-## CSS Preprocessors
-
-### Sass/Scss
-
-### PostCSS
+### Scss
 
 ### Less
 
@@ -110,9 +106,17 @@
 
 ## Data Structure
 
-### Sort
+### Quick Sort
 
-### Tree
+### AVL Tree
+
+### Red-Black Tree
+
+### Binary Search Tree
+
+### Depth-First Search
+
+### Breadth-First Search
 
 ## Progressive Web App
 
