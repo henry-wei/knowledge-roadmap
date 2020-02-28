@@ -14,7 +14,7 @@
 | mastered | boolean    |           | whether be marked to “mastered” |
 | category | array      |           | class of knowledge node         |
 
-**2. relations: the relations of each knowledge nodes in recipe **
+**2. relations: the relations of each knowledge nodes in recipe**
 
 | data   | type(json) | size | desc                              |
 | ------ | ---------- | ---- | --------------------------------- |
@@ -22,7 +22,7 @@
 | itemId | number     |      | the id in items                   |
 | parent | number     |      | the parent node of knowledge node |
 
-**3. knowledgeDetails: the details info of knowledge nodes **
+**3. knowledgeDetails: the details info of knowledge nodes**
 
 | data       | type(json) | size       | desc                                                   |
 | ---------- | ---------- | ---------- | ------------------------------------------------------ |
