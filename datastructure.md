@@ -11,7 +11,7 @@
 | id       | number     |           | key path                        |
 | title    | string     | <10 words | name of knowledge node          |
 | path     | string     |           | route of knowledge node         |
-| mastered | boolean    |           | whether be marked to “mastered” |
+| mastered | number     | 0 or 1    | whether be marked to “mastered” |
 | category | array      |           | class of knowledge node         |
 
 **2. relations: the relations of each knowledge nodes in recipe**
@@ -30,20 +30,20 @@
 | itemId     | number     |            | the id in items                                        |
 | title      | string     | <20 words  | name of knowledge details                              |
 | introduce  | string     | <300 words | the basic information about knowledge node             |
-| popularity | blob       |            | the popularity image of the knowledge item in nowadays |
+| popularity | string     |            | the image to describe the popularity of knowledge node |
 | moreInfo   | array      |            | the useful websites address about the knowledge node   |
 
 e.g.
 
 items = [
 
- { id: 1, title: "Internet", path: "", mastered: false, category: ["vantage", "advanced"] },
+ { id: 1, title: "Internet", path: "", mastered: 0, category: ["vantage", "advanced"] },
 
- { id: 2, title: "OSI", path: "/sss", mastered: false, category: ["vantage"] },
+ { id: 2, title: "OSI", path: "/sss", mastered: 0, category: ["vantage"] },
 
- { id: 3, title: "HTTP", path: "/xxx", mastered: false, category: ["vantage"] },
+ { id: 3, title: "HTTP", path: "/xxx", mastered: 0, category: ["vantage"] },
 
- { id: 4, title: "Angular", path: "/zzz", mastered: false, category: ["vantage"] },
+ { id: 4, title: "Angular", path: "/zzz", mastered: 0, category: ["vantage"] },
 
 ];
 
