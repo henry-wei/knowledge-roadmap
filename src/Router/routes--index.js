@@ -1,17 +1,32 @@
-import React from 'react'
-import SelectARole from '../selectARole/SelectARole';
-import RoadmapSelect from '../roadmapSelect/RoadmapSelect'
+import React, { Component } from 'react'
+import SelectARole from '../Component/pages/page-select-a-role/page-select-a-role';
+import RoadmapSelect from '../Component/pages/page-roadmap-select/page-roadmap-select'
+import './react-transition.css';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import LinesFollowMouse from '../Component/UI/lines-follow-mouse/lines-follow-mouse';
+import {Switch, Route, BrowserRouter, withRouter, Redirect} from 'react-router-dom';
 
-import {Router, Switch, Route} from 'react-router-dom';
-import {createBrowserHistory} from "history";
+const MyRoutres = withRouter(({location}) => (
+  <TransitionGroup >
+    <CSSTransition
+      // timeout={5000}
+      // classNames={'fade'}
+      // key={location.pathname}  
+    >
+        <Switch location={location}>
+          <Route path='/select' component={LinesFollowMouse}/> 
+          <Redirect from = "/" to="/select/selectARole"/>
+        </Switch>
+    </CSSTransition>
+  </TransitionGroup>
+));
 
-const customHistory = createBrowserHistory();
-const Routes = () => (
-     <Router history={customHistory}>
-      <Switch>
-        <Route path="/roadmapSelect" component={RoadmapSelect}/> 
-        <Route path="/" component={SelectARole}/>    
-      </Switch>
-    </Router>
-) 
-export default Routes;
+export default class Routes extends React.PureComponent{
+
+  render() {
+    return (
+      <BrowserRouter>
+        <MyRoutres/>
+      </BrowserRouter>
+    )}
+}
