@@ -4,7 +4,7 @@
 
 **objectStores**:
 
-**1. items: basic info about knowledge nodes in recipe**
+**1. knowledge_node: basic info about knowledge nodes in recipe**
 
 | data     | type(json) | size      | desc                            |
 | -------- | ---------- | --------- | ------------------------------- |
@@ -14,7 +14,7 @@
 | mastered | number     | 0 or 1    | whether be marked to “mastered” |
 | category | array      |           | class of knowledge node         |
 
-**2. relations: the relations of each knowledge nodes in recipe**
+**2. relation: the relations of each knowledge nodes in recipe**
 
 | data   | type(json) | size | desc                              |
 | ------ | ---------- | ---- | --------------------------------- |
@@ -22,7 +22,7 @@
 | itemId | number     |      | the id in items                   |
 | parent | number     |      | the parent node of knowledge node |
 
-**3. knowledgeDetails: the details info of knowledge nodes**
+**3. knowledge_Introduction: the details info of knowledge nodes**
 
 | data       | type(json) | size       | desc                                                   |
 | ---------- | ---------- | ---------- | ------------------------------------------------------ |
@@ -33,9 +33,16 @@
 | popularity | string     |            | the image to describe the popularity of knowledge node |
 | moreInfo   | array      |            | the useful websites address about the knowledge node   |
 
+**4. Role: user roles**
+
+| data | type(json) | size | desc          |
+| ---- | ---------- | ---- | ------------- |
+| id   | number     |      | key path      |
+| name | string     |      | the role name |
+
 e.g.
 
-items = [
+knowledge_nodes= [
 
  { id: 1, title: "Internet", path: "", mastered: 0, category: ["vantage", "advanced"] },
 
@@ -59,8 +66,14 @@ relations = [
 
 ];
 
-knowledgeDetails = [
+knowledge_Introduction= [
 
  { id: 1, itemId:4, title: "Angular", introduce: "xxxxxxxxxxxxxxxx", popularity: "response-blob", moreInfo: ["https://xxxx.html", "https://xxxx.html"] }
+
+];
+
+roles= [
+
+ { id: 1, name: “front-end developer” },
 
 ];
